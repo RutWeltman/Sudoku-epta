@@ -136,66 +136,66 @@ namespace ConsoleApplication2
                 Console.WriteLine(i.difficulty);
             }
 
-            Sudoku sudoku = sudoku_boards[0];
-            
+              Console.WriteLine("choose the level of diffuclty");
+              int choice = int.Parse(Console.ReadLine());
+              Sudoku sudoku = sudoku_boards[choice]; 
               while (sudoku.IsValid() != true)
-              {
-       
-                  sudoku.PrintBoard();
-                  ConsoleKey key = Console.ReadKey().Key;
-       
-                  switch (key)
-                  {
-                      case ConsoleKey.UpArrow:
-                          sudoku.SetPosition(sudoku.GetX(), sudoku.GetY() - 1);
-                          break;
-                      case ConsoleKey.DownArrow:
-                          sudoku.SetPosition(sudoku.GetX(), sudoku.GetY() + 1);
-                          break;
-                      case ConsoleKey.LeftArrow:
-                          sudoku.SetPosition(sudoku.GetX() - 1, sudoku.GetY());
-                          break;
-                      case ConsoleKey.RightArrow:
-                          sudoku.SetPosition(sudoku.GetX() + 1, sudoku.GetY());
-                          break;
-       
-                      case ConsoleKey.D0:
-                          sudoku.SetValue(0);
-                          break;
-                      case ConsoleKey.D1:
-                          sudoku.SetValue(1);
-                          break;
-                      case ConsoleKey.D2:
-                          sudoku.SetValue(2);
-                          break;
-                      case ConsoleKey.D3:
-                          sudoku.SetValue(3);
-                          break;
-                      case ConsoleKey.D4:
-                          sudoku.SetValue(4);
-                          break;
-                      case ConsoleKey.D5:
-                          sudoku.SetValue(5);
-                          break;
-                      case ConsoleKey.D6:
-                          sudoku.SetValue(6);
-                          break;
-                      case ConsoleKey.D7:
-                          sudoku.SetValue(7);
-                          break;
-                      case ConsoleKey.D8:
-                          sudoku.SetValue(8);
-                          break;
-                      case ConsoleKey.D9:
-                          sudoku.SetValue(9);
-                          break;
-                  }
-       
-                  Console.Clear();
-       
-       
+              
+                  { sudoku.PrintBoard();
+                      ConsoleKey key = Console.ReadKey().Key;
+
+                      switch (key)
+                      {
+                          case ConsoleKey.UpArrow:
+                              sudoku.SetPosition(sudoku.GetX(), sudoku.GetY() - 1);
+                              break;
+                          case ConsoleKey.DownArrow:
+                              sudoku.SetPosition(sudoku.GetX(), sudoku.GetY() + 1);
+                              break;
+                          case ConsoleKey.LeftArrow:
+                              sudoku.SetPosition(sudoku.GetX() - 1, sudoku.GetY());
+                              break;
+                          case ConsoleKey.RightArrow:
+                              sudoku.SetPosition(sudoku.GetX() + 1, sudoku.GetY());
+                              break;
+
+                          case ConsoleKey.D0:
+                              sudoku.SetValue(0);
+                              break;
+                          case ConsoleKey.D1:
+                              sudoku.SetValue(1);
+                              break;
+                          case ConsoleKey.D2:
+                              sudoku.SetValue(2);
+                              break;
+                          case ConsoleKey.D3:
+                              sudoku.SetValue(3);
+                              break;
+                          case ConsoleKey.D4:
+                              sudoku.SetValue(4);
+                              break;
+                          case ConsoleKey.D5:
+                              sudoku.SetValue(5);
+                              break;
+                          case ConsoleKey.D6:
+                              sudoku.SetValue(6);
+                              break;
+                          case ConsoleKey.D7:
+                              sudoku.SetValue(7);
+                              break;
+                          case ConsoleKey.D8:
+                              sudoku.SetValue(8);
+                              break;
+                          case ConsoleKey.D9:
+                              sudoku.SetValue(9);
+                              break;
+                      }
+
+                      Console.Clear();
+
+                      
               }
-       
+
               Console.WriteLine("ты победил");
             }
         }
